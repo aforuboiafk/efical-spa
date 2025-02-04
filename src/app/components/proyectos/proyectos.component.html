@@ -1,0 +1,22 @@
+<section class="projects-header">
+    <h1>Nuestros Proyectos</h1>
+    <p>Conoce nuestros casos de éxito</p>
+  </section>
+  
+  <section class="projects-grid">
+    <mat-card *ngFor="let project of projects" class="project-card">
+      <img mat-card-image [src]="project.imageUrl" [alt]="project.title">
+      <mat-card-header>
+        <mat-card-title>{{project.title}}</mat-card-title>
+        <mat-card-subtitle>{{project.client}} - {{project.year}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{project.description}}</p>
+        <mat-chip-listbox>
+          <mat-chip color="primary" selected routerLink="/contacto" class="clickable-chip">
+            {{project.type}}
+          </mat-chip>
+        </mat-chip-listbox>
+      </mat-card-content>
+    </mat-card>
+  </section>

@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Efical Spa</span>
+    <span class="spacer"></span>
+    
+    <div class="nav-links desktop-menu">
+      <a mat-button routerLink="/home" routerLinkActive="active">Inicio</a>
+      <a mat-button routerLink="/servicios" routerLinkActive="active">Servicios</a>
+      <a mat-button routerLink="/proyectos" routerLinkActive="active">Proyectos</a>
+      <a mat-button routerLink="/equipo" routerLinkActive="active">Equipo</a>
+      <a mat-button routerLink="/contacto" routerLinkActive="active">Contacto</a>
+    </div>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="mobile-menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <a mat-menu-item routerLink="/home">Inicio</a>
+      <a mat-menu-item routerLink="/servicios">Servicios</a>
+      <a mat-menu-item routerLink="/proyectos">Proyectos</a>
+      <a mat-menu-item routerLink="/equipo">Equipo</a>
+      <a mat-menu-item routerLink="/contacto">Contacto</a>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

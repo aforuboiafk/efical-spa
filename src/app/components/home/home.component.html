@@ -1,0 +1,30 @@
+<section class="hero">
+    <div class="hero-content">
+      <h1>Efical Spa</h1>
+      <h2>Expertos en Soluciones Hidráulicas Sanitarias</h2>
+      <p>Compromiso con la excelencia y calidad en cada proyecto</p>
+      <a mat-raised-button color="primary" routerLink="/contacto">Contáctanos</a>
+    </div>
+  </section>
+  
+  <section class="mission-vision">
+    <mat-card class="info-card" *ngFor="let card of infoCards">
+      <mat-card-header>
+        <mat-card-title>{{card.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{card.content}}</p>
+      </mat-card-content>
+    </mat-card>
+  </section>
+  
+  <section class="features">
+    <h2>Nuestros Valores</h2>
+    <div class="features-grid">
+      <mat-card *ngFor="let card of valueCards">
+        <mat-icon>{{card.icon}}</mat-icon>
+        <h3>{{card.title}}</h3>
+        <p>{{card.description}}</p>
+      </mat-card>
+    </div>
+  </section>

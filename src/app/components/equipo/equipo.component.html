@@ -1,0 +1,25 @@
+<section class="team-header">
+    <h1>Nuestro Equipo</h1>
+    <p>Conoce a los profesionales detrás de Efical Spa</p>
+  </section>
+  
+  <section class="team-grid">
+    <mat-card *ngFor="let member of teamMembers" class="team-card">
+      <img mat-card-image [src]="member.imageUrl" [alt]="member.name">
+      <mat-card-header>
+        <mat-card-title>{{member.name}}</mat-card-title>
+        <mat-card-subtitle>{{member.role}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{member.description}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-icon-button [href]="'mailto:' + member.socialMedia?.email" *ngIf="member.socialMedia?.email">
+          <mat-icon>email</mat-icon>
+        </a>
+        <a mat-icon-button [href]="member.socialMedia?.linkedin" target="_blank" *ngIf="member.socialMedia?.linkedin">
+          <mat-icon>linkedin</mat-icon>
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </section>
