@@ -45,22 +45,27 @@ export class HomeComponent {
     {
       icon: 'verified',
       title: 'Certificaciones',
-      description: 'Certificación profesional de calderas, hornos y quemadores industriales'
+      description: 'Certificación profesional de calderas, hornos, análisis de gases y calibración de quemadores industriales. Certificación de estanques de petróleo y sus componentes según DS10 2012 MINSAL, análisis de gases y calibración de quemadores.'
     },
     {
       icon: 'build',
       title: 'Mantenciones',
-      description: 'Servicio técnico especializado en equipos térmicos industriales'
+      description: 'Servicio técnico especializado en equipos térmicos industriales, redes de vapor, condensado y climatización (calderas de agua caliente y aceite térmico). Redes de vapor y condensado, refractarios y climatización( calderas de agua caliente y aceite térmico)'
     },
     {
       icon: 'shopping_cart',
       title: 'Ventas',
-      description: 'Equipos y repuestos originales para sistemas térmicos'
+      description: 'Equipos y repuestos originales para sistemas térmicos (RIELLO, ECOFLAM, ANWO, IVAR, SIME, PONAST), manómetros, hidrómetros, electroválvulas.'
     },
     {
       icon: 'hardware',
       title: 'Ferretería Termoindustrial',
-      description: 'Suministros especializados para la industria térmica'
+      description: 'Suministros especializados para la industria térmica. Norma ISO o DIN, globo, corte rápido, compuerta, fierro fundido, inoxidable o bronce.'
+    },
+    {
+      icon: 'engineering',
+      title: 'Desarrollo y mantención de sistemas VRV',
+      description: 'Desarrollo y mantención de sistemas VRV, aire acondicionado o Chiller.'
     }
   ];
 }

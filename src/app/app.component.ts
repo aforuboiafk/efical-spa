@@ -15,5 +15,5 @@ import { FooterComponent } from './components/footer/footer.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'efical-spa';
+  title = 'EFICAL SpA';
 }
