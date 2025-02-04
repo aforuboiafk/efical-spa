@@ -44,6 +44,14 @@ export class EquipoComponent {
       }
     },
     {
+      name: "Ruth Sandra Negrete Obreque",
+      role: "Encargada de Laboratorio y Certificaciones",
+      description: "Ingeniera química, profesional facultada por SS Talcahuano registro N°19. Especializada en análisis de laboratorio y procesos de certificación industrial.",
+      imageUrl: "assets/team/ruth.jpg",
+      socialMedia: {
+      }
+    },
+    {
       name: "Yamandú Lettieri",
       role: "Desarrollador de software",
       description: "Desarrollador con experiencia en tecnologías como Java, Spring Framework y Angular. Ha trabajado en Trebol-IT desarrollando aplicaciones web para clientes como Banco de Chile y actualmente realiza su práctica en Banco BICE. Cuenta con formación en Ingeniería en Informática en la Universidad Técnica Federico Santa María y certificaciones en trabajo en equipo y desarrollo Full-Stack Python.",
