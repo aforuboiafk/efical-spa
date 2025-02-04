@@ -10,7 +10,7 @@ frontend:
       commands:
         - npm run build -- --configuration=production
   artifacts:
-    baseDirectory: dist/efical-spa
+    baseDirectory: dist/efical-spa/browser
     files:
       - '**/*'
   cache:
