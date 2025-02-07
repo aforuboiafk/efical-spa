@@ -1,3 +1,4 @@
 User-agent: *
-Allow: /
-Sitemap: https://efical-spa.cl/sitemap.xml
+Disallow:
+
+Sitemap: https://efical-spa.cl/assets/sitemap.xml
