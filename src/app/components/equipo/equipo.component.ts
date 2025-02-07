@@ -30,7 +30,7 @@ export class EquipoComponent {
       description: "Constructor Civil, profesional con experiencia en ejecución y planificación de obras civiles.",
       imageUrl: "",
       socialMedia: {
-        email: "gabi.lizama@gmail.com",
+        email: "efical.climatizacion@gmail.com",
         linkedin: "https://www.linkedin.com/in/gabriela-lizama-m-07231080/",
 
       }
@@ -41,6 +41,7 @@ export class EquipoComponent {
       description: 'Especialista en Calderas, sistemas caloportadores y climatización en general.',
       imageUrl: '',
       socialMedia: {
+        email:"efical.climatizacion@gmail.com"
       }
     },
     {
