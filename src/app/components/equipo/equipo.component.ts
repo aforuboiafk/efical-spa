@@ -31,8 +31,6 @@ export class EquipoComponent {
       imageUrl: "",
       socialMedia: {
         email: "efical.climatizacion@gmail.com",
-        linkedin: "https://www.linkedin.com/in/gabriela-lizama-m-07231080/",
-
       }
     },
     {
