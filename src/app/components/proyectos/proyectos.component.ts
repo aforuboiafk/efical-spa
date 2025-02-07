@@ -90,7 +90,7 @@ export class ProyectosComponent {
     {
       title: 'Mantención y certificación D.S. 10, Caldera a Vapor, Pirotubular de antehogar húmedo.',
       client: 'COAGRA, Planta Victoria.',
-      imageUrl: '/assets/trabajos/rielloalamos.jpg',
+      imageUrl: '/assets/trabajos/ds10caldera.jpg',
       type: 'Mantención y Certificación'
     },
     {
