@@ -25,10 +25,10 @@ interface TeamMember {
 export class EquipoComponent {
   teamMembers: TeamMember[] = [
     {
-      name: "Gabriela Lizama M.",
-      role: "Constructor Civil",
-      description: "Profesional con experiencia en ejecución y planificación de obras civiles y de edificación. Ha trabajado como Jefe de Terreno y Administrador de Contrato en diversas empresas, supervisando el correcto desempeño de las obras y garantizando el cumplimiento de normativas de seguridad, costos y plazos.",
-      imageUrl: "URL de la imagen de perfil",
+      name: "Gabriela Lizama Marín",
+      role: "Oficina Técnica",
+      description: "Constructor Civil, profesional con experiencia en ejecución y planificación de obras civiles.",
+      imageUrl: "",
       socialMedia: {
         email: "gabi.lizama@gmail.com",
         linkedin: "https://www.linkedin.com/in/gabriela-lizama-m-07231080/",
@@ -36,10 +36,10 @@ export class EquipoComponent {
       }
     },
     {
-      name: 'Roderico',
-      role: 'Director Técnico',
-      description: 'Especialista en sistemas hidráulicos con más de 20 años de experiencia en el sector industrial.',
-      imageUrl: 'assets/team/roderico.jpg',
+      name: 'Roderico Riquelme Novoa',
+      role: 'Supervisor Técnico',
+      description: 'Especialista en Calderas, sistemas caloportadores y climatización en general.',
+      imageUrl: '',
       socialMedia: {
       }
     },
@@ -47,15 +47,15 @@ export class EquipoComponent {
       name: "Ruth Sandra Negrete Obreque",
       role: "Encargada de Laboratorio y Certificaciones",
       description: "Ingeniera química, profesional facultada por SS Talcahuano registro N°19. Especializada en análisis de laboratorio y procesos de certificación industrial.",
-      imageUrl: "assets/team/ruth.jpg",
+      imageUrl: "",
       socialMedia: {
       }
     },
     {
       name: "Yamandú Lettieri",
       role: "Desarrollador de software",
-      description: "Desarrollador con experiencia en tecnologías como Java, Spring Framework y Angular. Ha trabajado en Trebol-IT desarrollando aplicaciones web para clientes como Banco de Chile y actualmente realiza su práctica en Banco BICE. Cuenta con formación en Ingeniería en Informática en la Universidad Técnica Federico Santa María y certificaciones en trabajo en equipo y desarrollo Full-Stack Python.",
-      imageUrl: "URL de la imagen de perfil",
+      description: "Desarrollador con experiencia en tecnologías como Java, Spring Framework y Angular. Apasionado por la tecnología y la programación. Mantenimiento de la página web.",
+      imageUrl: "",
       socialMedia: {
         email: "yamandu.lettieri.l@gmail.com",
         linkedin: "https://www.linkedin.com/in/yamand%C3%BA-lettieri-a29354214/"

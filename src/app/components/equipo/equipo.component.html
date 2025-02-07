@@ -5,7 +5,7 @@
   
   <section class="team-grid">
     <mat-card *ngFor="let member of teamMembers" class="team-card">
-      <img mat-card-image [src]="member.imageUrl" [alt]="member.name">
+      <img *ngIf="member.imageUrl.length > 0" mat-card-image [src]="member.imageUrl" [alt]="member.name">
       <mat-card-header>
         <mat-card-title>{{member.name}}</mat-card-title>
         <mat-card-subtitle>{{member.role}}</mat-card-subtitle>

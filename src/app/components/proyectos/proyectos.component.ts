@@ -7,11 +7,9 @@ import { RouterModule } from '@angular/router';
 
 interface Project {
   title: string;
-  description: string;
   imageUrl: string;
   type: string;
   client: string;
-  year: string;
 }
 
 @Component({
@@ -24,28 +22,88 @@ interface Project {
 export class ProyectosComponent {
   projects: Project[] = [
     {
-      title: 'Mantenimiento Caldera Industrial',
-      description: 'Mantenimiento preventivo y correctivo de caldera de alta presión',
-      imageUrl: 'assets/projects/caldera1.jpg',
+      title: 'Mantenimiento de Caldera Instituto Alemán de Puerto Montt.',
+      imageUrl: '/assets/trabajos/colegio-aleman.jpg',
       type: 'Mantención',
-      client: 'Industria Textil S.A.',
-      year: '2023'
+      client: 'Instituto Alemán de Puerto Montt'
     },
     {
-      title: 'Instalación Sistema de Hornos',
-      description: 'Diseño e instalación de sistema de hornos industriales',
-      imageUrl: 'assets/projects/horno1.jpg',
+      title: 'Cambio de estanque ACS, de 3.000 L.',
+      imageUrl: '/assets/trabajos/boiler2.jpg',
       type: 'Instalación',
-      client: 'Panadería Industrial Norte',
-      year: '2023'
+      client: 'Hospital de Santa Cruz',
     },
     {
-      title: 'Certificación Equipos Térmicos',
-      description: 'Proceso de certificación completa de equipos térmicos',
-      imageUrl: 'assets/projects/certificacion1.jpg',
-      type: 'Certificación',
-      client: 'Planta Procesadora Ltd.',
-      year: '2024'
-    }
+      title: 'Cambio y calibracion de válvula reguladora de presión Spence.',
+      imageUrl: '/assets/trabajos/spence.jpg',
+      type: 'Instalación',
+      client: 'Armada de Chile',
+    },
+    {
+      title: 'Mantención control de nivel McDonell 150.',
+      client: 'Armada de Chile',
+      imageUrl: '/assets/trabajos/mcdonell.jpg',
+      type: 'Mantención'
+    },
+    {
+      title: 'Suministro, instalación y calibracion, quemador Riello 40G20.',
+      client: 'CESFAM Yerbas Buenas',
+      imageUrl: '/assets/trabajos/Riello.jpg',
+      type: 'Instalación'
+    },
+    {
+      title: 'Suministro, instalación, calibracion, válvula reguladora de presión Spirax Sarco, cambio Bypass.',
+      client: 'Cecinas Pincheira, Ñuble',
+      imageUrl: '/assets/trabajos/spirax.jpg',
+      type: 'Instalación'
+    },
+    {
+      title: 'Análisis falla caldera SIME.',
+      client: 'CESFAM Santa Fe, Los Ángeles.',
+      imageUrl: '/assets/trabajos/sime.jpg',
+      type: 'Instalación'
+    },
+    {
+      title: 'Certificación de calderas murales.',
+      client: 'Junji Ñuble.',
+      imageUrl: '/assets/trabajos/ds10.jpg',
+      type: 'Certificación'
+    },
+    {
+      title: 'Mantención estanques de petróleo.',
+      client: 'Infantería Marina, Armada de Chile.',
+      imageUrl: '/assets/trabajos/petroleo.jpg',
+      type: 'Mantención'
+    },
+    {
+      title: 'Mantención quemador Riello RL 44 y Caldera IVAR SUPERAC 695.',
+      client: 'Municipalida de los Alamos.',
+      imageUrl: '/assets/trabajos/rielloivan.jpg',
+      type: 'Mantención'
+    },
+    {
+      title: 'Calibracion de electrodos de encendido y cambio de boquillas, quemador Riello RL 44.',
+      client: 'Municipalida de los Alamos.',
+      imageUrl: '/assets/trabajos/rielloalamos.jpg',
+      type: 'Mantención'
+    },
+    {
+      title: 'Mantención y certificación D.S. 10, Caldera a Vapor, Pirotubular de antehogar húmedo.',
+      client: 'COAGRA, Planta Victoria.',
+      imageUrl: '/assets/trabajos/rielloalamos.jpg',
+      type: 'Mantención y Certificación'
+    },
+    {
+      title: 'Cambio de tubos Mannesman, sin costura 3.2 mm, Caldera VISA, Pirotubular.',
+      client: 'Pesquera Blumar, Talcahuano.',
+      imageUrl: '/assets/trabajos/mannesman.jpg',
+      type: 'Mantención'
+    },
+    {
+      title: 'Suministro, instalación y calibracion, válvulas de seguridad con Certificación D.S.10.',
+      client: 'Pesquera Blumar, Talcahuano.',
+      imageUrl: '/assets/trabajos/ds10pesquera.jpg',
+      type: 'Instalación'
+    },
   ];
 }

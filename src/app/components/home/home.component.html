@@ -1,6 +1,6 @@
 <section class="hero">
     <div class="hero-content">
-      <h1>EFICAL SpA</h1>
+      <img src="assets/images/logo.png" alt="EFICAL SpA Logo" class="logo">
       <h2>Expertos en Eficiencia Térmica</h2>
       <p>Compromiso con la excelencia y calidad en cada proyecto</p>
       <a mat-raised-button color="primary" routerLink="/contacto">Contáctanos</a>
@@ -8,14 +8,14 @@
   </section>
   
   <section class="mission-vision">
-    <mat-card class="info-card" *ngFor="let card of infoCards">
-      <mat-card-header>
-        <mat-card-title>{{card.title}}</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p>{{card.content}}</p>
-      </mat-card-content>
-    </mat-card>
+    <div class="mission">
+      <h2>Misión</h2>
+      <p>Proveer soluciones integrales en mantenimiento y certificación de equipos térmicos industriales, garantizando la eficiencia y seguridad en cada servicio.</p>
+    </div>
+    <div class="vision">
+      <h2>Visión</h2>
+      <p>Ser líderes en el sector de mantenimiento y certificación de equipos térmicos, reconocidos por nuestra excelencia técnica y compromiso con la calidad.</p>
+    </div>
   </section>
   
   <section class="features">
