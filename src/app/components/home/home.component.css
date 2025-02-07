@@ -101,10 +101,6 @@
   .hero h1 {
     font-size: 2em;
   }
-
-  .mission, .vision {
-    width: 100%;
-  }
 }
 
 .features-grid mat-card {
