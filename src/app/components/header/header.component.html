@@ -1,14 +1,17 @@
-<mat-toolbar class="bg-blue text-white" color="primary">
+<mat-toolbar class=" text-white" color="primary">
   <mat-toolbar-row>
-    <img src="assets/images/logo.png" alt="">
+    <a routerLink="/home">
+      <img src="assets/images/logo.png" alt="">
+    </a>
+
     <span class="spacer"></span>
     
     <div class="nav-links desktop-menu">
-      <a mat-button routerLink="/home" routerLinkActive="active">Inicio</a>
-      <a mat-button routerLink="/servicios" routerLinkActive="active">Servicios</a>
-      <a mat-button routerLink="/trabajos" routerLinkActive="active">Trabajos</a>
-      <a mat-button routerLink="/equipo" routerLinkActive="active">Equipo</a>
-      <a mat-button routerLink="/contacto" routerLinkActive="active">Contacto</a>
+      <a mat-button routerLink="/home" routerLinkActive="active">INICIO</a>
+      <a mat-button routerLink="/servicios" routerLinkActive="active">SERVICIOS</a>
+      <a mat-button routerLink="/trabajos" routerLinkActive="active">TRABAJOS</a>
+      <a mat-button routerLink="/equipo" routerLinkActive="active">EQUIPO</a>
+      <a mat-button routerLink="/contacto" routerLinkActive="active">CONTACTO</a>
     </div>
 
     <button mat-icon-button [matMenuTriggerFor]="menu" class="mobile-menu">
@@ -16,11 +19,11 @@
     </button>
 
     <mat-menu #menu="matMenu">
-      <a mat-menu-item routerLink="/home">Inicio</a>
-      <a mat-menu-item routerLink="/servicios">Servicios</a>
-      <a mat-menu-item routerLink="/trabajos">Trabajos</a >
-      <a mat-menu-item routerLink="/equipo">Equipo</a>
-      <a mat-menu-item routerLink="/contacto">Contacto</a>
+      <a mat-menu-item routerLink="/home">INICIO</a>
+      <a mat-menu-item routerLink="/servicios">SERVICIOS</a>
+      <a mat-menu-item routerLink="/trabajos">TRABAJOS</a >
+      <a mat-menu-item routerLink="/equipo">EQUIPO</a>
+      <a mat-menu-item routerLink="/contacto">CONTACTO</a>
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>

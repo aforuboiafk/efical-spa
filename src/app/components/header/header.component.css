@@ -7,13 +7,34 @@
   gap: 20px;
 }
 
-.active {
-  background-color: rgba(255, 255, 255, 0.1);
+.nav-links a {
+  position: relative;
+  padding-bottom: 5px;
+  color: #054289;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #054289;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
 }
 
 .mobile-menu {
   display: none;
-  color: white;
+  color: #054289;
+
 }
 
 @media (max-width: 768px) {
@@ -24,35 +45,19 @@
   .mobile-menu {
     display: block;
   }
-  
-  .mat-toolbar {
-    height: 60px; /* Smaller toolbar for mobile */
-  }
 }
 
 .mat-toolbar {
-  background-color: #054289;
-  color: white;
-  padding: 0 16px;
-  height: 70px; /* Adjust toolbar height to accommodate logo */
+  background-color: white;
+  color: #054289;
+  padding: 1rem;
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .mat-toolbar img {
-  height: 50px; /* Adjust this value to match your desired logo height */
+  height: 5rem; /* Adjust this value to match your desired logo height */
   margin-right: 20px;
   object-fit: contain;
-}
-
-.nav-links a {
-  color: white;
-  opacity: 0.8;
-  transition: opacity 0.3s;
-}
-
-.nav-links a:hover {
-  opacity: 1;
-}
-
-.nav-links a.active {
-  opacity: 1;
 }

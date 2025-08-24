@@ -8,6 +8,8 @@
   justify-content: center;
   color: white;
   text-align: center;
+  font-weight: lighter;
+  padding-top: 4rem;
 }
 
 .logo {
@@ -107,10 +109,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   padding: 2rem;
   height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: white;
+}
+
+.features-grid mat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .features-grid mat-icon {
@@ -118,14 +128,34 @@
   margin: 0 auto 1rem auto;
   font-size: 2.5rem;
   height: 2.5rem;
-  width: 2.5rem;
-  color: #3f51b5;
+  color: white;
+  padding: 1rem;
+  border-radius: 4rem;
+  background-color: #054289;
 }
 
 .features-grid h3 {
   margin: 1rem 0;
+  color: #054289;
 }
 
 .features-grid p {
   margin: 0;
+  color: #054289;
+}
+
+@media (max-width: 768px) {
+  .mission-vision {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .features-grid mat-card {
+    padding: 1.5rem;
+  }
 }
