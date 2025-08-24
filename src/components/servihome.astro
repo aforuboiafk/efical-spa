@@ -1,0 +1,106 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+
+// Import images
+import certificationImg from "../images/trabajos/ds10caldera.jpg";
+import maintenanceImg from "../images/trabajos/boiler2.jpg";
+import salesImg from "../images/trabajos/Riello.jpg";
+import hardwareImg from "../images/trabajos/spirax.jpg";
+import acImg from "../images/trabajos/mannesman.jpg";
+
+const services = [
+  {
+    icon: "mdi:certificate-outline",
+    title: "CERTIFICACIONES",
+    description:
+      "Certificación profesional de calderas, hornos, análisis de gases y calibración de quemadores industriales. Certificación de estanques de petróleo y sus componentes según DS10 2012 MINSAL, análisis de gases y calibración de quemadores.",
+    image: certificationImg,
+  },
+  {
+    icon: "mdi:tools",
+    title: "MANUTENCIONES",
+    description:
+      "Servicio técnico especializado en equipos térmicos industriales, redes de vapor, condensado y climatización (calderas de agua caliente y aceite térmico). Redes de vapor y condensado, refractarios y climatización( calderas de agua caliente y aceite térmico)",
+    image: maintenanceImg,
+  },
+  {
+    icon: "mdi:cart",
+    title: "VENTAS",
+    description:
+      "Equipos y repuestos originales para sistemas térmicos (RIELLO, ECOFLAM, ANWO, IVAR, SIME, PONAST), manómetros, hidrómetros, electroválvulas.",
+    image: salesImg,
+  },
+  {
+    icon: "mdi:warehouse",
+    title: "FERRETERÍA TERMOINDUSTRIAL",
+    description:
+      "Suministros especializados para la industria térmica. Norma ISO o DIN, globo, corte rápido, compuerta, fierro fundido, inoxidable o bronce.",
+    image: hardwareImg,
+  },
+  {
+    icon: "mdi:air-conditioner",
+    title: "DESARROLLO Y MANTENCIÓN DE SISTEMAS VRV",
+    description:
+      "Desarrollo y mantención de sistemas VRV, aire acondicionado o Chiller.",
+    image: acImg,
+  },
+];
+
+// Function to split description into sentences
+const splitSentences = (text: string) => {
+  return text.split(".").filter((sentence) => sentence.trim().length > 0);
+};
+---
+
+<section class="py-16 md:py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-950 text-center mb-12">
+      NUESTROS SERVICIOS
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        services.map((service) => (
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] flex flex-col h-full">
+            <div class="relative h-48 overflow-hidden">
+              <Image
+                src={service.image}
+                alt={`Imagen de ${service.title}`}
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <div class="relative px-8 pt-12 pb-8 flex flex-col flex-1">
+              <div class="absolute -top-8 left-1/2 -translate-x-1/2">
+                <div class="w-16 h-16 bg-[hsl(82.35deg_42.15%_52.55%)] text-white rounded-full flex items-center justify-center shadow-lg">
+                  <Icon name={service.icon} class="w-8 h-8" />
+                </div>
+              </div>
+
+              <div class="flex-1">
+                <h3 class="text-2xl font-semibold text-blue-950 text-center mb-4">
+                  {service.title}
+                </h3>
+                <div class="space-y-2 text-gray-600 text-center">
+                  {splitSentences(service.description).map((sentence) => (
+                    <p>{sentence.trim()}.</p>
+                  ))}
+                </div>
+              </div>
+
+              <div class="text-center mt-6">
+                <a
+                  href="/contacto"
+                  class="inline-block bg-[hsl(82.35deg_42.15%_52.55%)] text-white px-8 py-3 rounded-md font-semibold transition-colors duration-200 hover:opacity-80 hover:shadow-lg"
+                >
+                  Cotizar ahora
+                </a>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

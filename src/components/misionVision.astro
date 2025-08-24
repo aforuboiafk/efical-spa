@@ -1,0 +1,66 @@
+---
+const missionVision = [
+  {
+    title: "MISIÓN",
+    subtitle: "Compromiso con la excelencia y la seguridad.",
+    description: [
+      "Nuestra misión es proporcionar soluciones integrales, eficientes y confiables en el mantenimiento y certificación de equipos térmicos industriales.",
+      "Nos comprometemos a garantizar altos estándares de seguridad, eficiencia energética y cumplimiento normativo en cada intervención, respaldados por un equipo técnico altamente calificado, procesos innovadores y una atención personalizada que asegure la continuidad operativa y la confianza de nuestros clientes.",
+    ],
+  },
+  {
+    title: "VISIÓN",
+    subtitle: "Liderazgo basado en innovación y responsabilidad.",
+    description: [
+      "Aspiramos a consolidarnos como la empresa líder y referente en el ámbito del mantenimiento y certificación de equipos térmicos industriales a nivel nacional.",
+      "Buscamos ser reconocidos por nuestra excelencia técnica, innovación constante, compromiso con el medio ambiente y relaciones duraderas con nuestros clientes, basadas en la confianza, la responsabilidad y la mejora continua de nuestros servicios.",
+    ],
+  },
+];
+---
+
+<section class="max-w-7xl mx-auto px-6 pt-20" aria-labelledby="aboutTitle">
+  <h2
+    id="aboutTitle"
+    class="text-3xl md:text-4xl font-extrabold text-blue-950 text-center mb-16"
+  >
+    ACERCA DE NOSOTROS
+  </h2>
+
+  <div class="w-full h-1 bg-[hsl(82.35deg_42.15%_52.55%)] mb-16"></div>
+
+  <div
+    class="bg-white p-10 rounded-xl shadow-md text-gray-700 leading-relaxed space-y-6 mb-16"
+  >
+    <p>
+      Somos una empresa con años de experiencia en el mantenimiento y
+      certificación de equipos térmicos industriales. A pesar de ser un equipo
+      pequeño, destacamos por nuestro compromiso, cercanía y alto nivel técnico.
+    </p>
+    <p>
+      Trabajamos con responsabilidad, priorizando la seguridad, la eficiencia y
+      el cumplimiento normativo en cada proyecto. Nuestra meta es entregar
+      soluciones confiables que generen confianza y continuidad operativa en
+      nuestros clientes.
+    </p>
+  </div>
+
+  <div class="grid gap-16 md:grid-cols-2">
+    {
+      missionVision.map(({ title, subtitle, description }) => (
+        <article class="bg-white p-10 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+          <header class="mb-6">
+            <h3 class="text-3xl font-extrabold text-blue-950">{title}</h3>
+            <p class="text-[hsl(82.35deg_42.15%_52.55%)] mt-1">{subtitle}</p>
+          </header>
+
+          <div class="space-y-5 text-gray-700 leading-relaxed">
+            {description.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,164 @@
+---
+import Layout from "../layouts/layout.astro";
+import HeroSection from "../components/heroSection.astro";
+
+// Import images
+import colegioAleman from "../images/trabajos/colegio-aleman.jpg";
+import boiler2 from "../images/trabajos/boiler2.jpg";
+import spence from "../images/trabajos/spence.jpg";
+import mcdonell from "../images/trabajos/mcdonell.jpg";
+import riello from "../images/trabajos/Riello.jpg";
+import spirax from "../images/trabajos/spirax.jpg";
+import sime from "../images/trabajos/sime.jpg";
+import ds10 from "../images/trabajos/ds10.jpg";
+import petroleo from "../images/trabajos/petroleo.jpg";
+import rielloivan from "../images/trabajos/rielloivan.jpg";
+import rielloalamos from "../images/trabajos/rielloalamos.jpg";
+import ds10caldera from "../images/trabajos/ds10caldera.jpg";
+import mannesman from "../images/trabajos/mannesman.jpg";
+import ds10pesquera from "../images/trabajos/ds10pesquera.jpg";
+
+const projects = [
+  {
+    title: "Mantenimiento de Caldera Instituto Alemán de Puerto Montt",
+    image: colegioAleman,
+    type: "Mantención",
+    client: "Instituto Alemán de Puerto Montt",
+  },
+  {
+    title: "Cambio de estanque ACS, de 3.000 L",
+    image: boiler2,
+    type: "Instalación",
+    client: "Hospital de Santa Cruz",
+  },
+  {
+    title: "Cambio y calibracion de válvula reguladora de presión Spence",
+    image: spence,
+    type: "Instalación",
+    client: "Armada de Chile",
+  },
+  {
+    title: "Mantención control de nivel McDonell 150",
+    image: mcdonell,
+    type: "Mantención",
+    client: "Armada de Chile",
+  },
+  {
+    title: "Suministro, instalación y calibracion, quemador Riello 40G20",
+    image: riello,
+    type: "Instalación",
+    client: "CESFAM Yerbas Buenas",
+  },
+  {
+    title:
+      "Suministro, instalación, calibracion, válvula reguladora de presión Spirax Sarco, cambio Bypass",
+    image: spirax,
+    type: "Instalación",
+    client: "Cecinas Pincheira, Ñuble",
+  },
+  {
+    title: "Análisis falla caldera SIME",
+    image: sime,
+    type: "Instalación",
+    client: "CESFAM Santa Fe, Los Ángeles",
+  },
+  {
+    title: "Certificación de calderas murales",
+    image: ds10,
+    type: "Certificación",
+    client: "Junji Ñuble",
+  },
+  {
+    title: "Mantención estanques de petróleo",
+    image: petroleo,
+    type: "Mantención",
+    client: "Infantería Marina, Armada de Chile",
+  },
+  {
+    title: "Mantención quemador Riello RL 44 y Caldera IVAR SUPERAC 695",
+    image: rielloivan,
+    type: "Mantención",
+    client: "Municipalida de los Alamos",
+  },
+  {
+    title:
+      "Calibracion de electrodos de encendido y cambio de boquillas, quemador Riello RL 44",
+    image: rielloalamos,
+    type: "Mantención",
+    client: "Municipalida de los Alamos",
+  },
+  {
+    title:
+      "Mantención y certificación D.S. 10, Caldera a Vapor, Pirotubular de antehogar húmedo",
+    image: ds10caldera,
+    type: "Mantención y Certificación",
+    client: "COAGRA, Planta Victoria",
+  },
+  {
+    title:
+      "Cambio de tubos Mannesman, sin costura 3.2 mm, Caldera VISA, Pirotubular",
+    image: mannesman,
+    type: "Mantención",
+    client: "Pesquera Blumar, Talcahuano",
+  },
+  {
+    title:
+      "Suministro, instalación y calibracion, válvulas de seguridad con Certificación D.S.10",
+    image: ds10pesquera,
+    type: "Instalación",
+    client: "Pesquera Blumar, Talcahuano",
+  },
+];
+---
+
+<Layout
+  title="Trabajos Realizados - Efical SpA"
+  description="Explore nuestros casos de éxito y proyectos realizados en mantención, certificación e instalación de equipos térmicos industriales."
+>
+  <main>
+    <HeroSection
+      title="Nuestros Proyectos"
+      subtitle="Conoce nuestros casos de éxito"
+      backgroundImage={mannesman}
+      bgColor="bg-blue-950"
+    />
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {
+            projects.map((project) => (
+              <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div class="relative h-48">
+                  <img
+                    src={project.image.src}
+                    alt={project.title}
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold text-blue-950 mb-2">
+                    {project.title}
+                  </h3>
+                  <p class="text-gray-600 mb-4">{project.client}</p>
+                  <div class="flex items-center justify-between">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-[hsl(82.35deg_42.15%_52.55%)] text-white">
+                      {project.type}
+                    </span>
+                    <a
+                      href="/contacto"
+                      class="text-blue-950 hover:text-[hsl(82.35deg_42.15%_52.55%)] transition-colors"
+                    >
+                      Solicitar servicio →
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
