@@ -1,0 +1,129 @@
+---
+import Layout from "../layouts/layout.astro";
+import HeroSection from "../components/heroSection.astro";
+import petroleo from "../images/trabajos/petroleo.jpg";
+
+// Definimos los datos del equipo directamente en el frontmatter del archivo Astro
+const teamMembers = [
+  {
+    name: "Gabriela Lizama Marín",
+    role: "Oficina Técnica",
+    description:
+      "Constructor Civil, profesional con experiencia en ejecución y planificación de obras civiles.",
+    socialMedia: {
+      email: "efical.climatizacion@gmail.com",
+    },
+  },
+  {
+    name: "Roderico Riquelme Novoa",
+    role: "Supervisor Técnico",
+    description:
+      "Especialista en Calderas, sistemas caloportadores y climatización en general.",
+    socialMedia: {
+      email: "efical.climatizacion@gmail.com",
+    },
+  },
+  {
+    name: "Ruth Sandra Negrete Obreque",
+    role: "Encargada de Laboratorio y Certificaciones",
+    description:
+      "Ingeniera química, profesional facultada por SS Talcahuano registro N°19. Especializada en análisis de laboratorio y procesos de certificación industrial.",
+    socialMedia: {},
+  },
+  {
+    name: "Yamandú Lettieri",
+    role: "Desarrollador de software",
+    description:
+      "Desarrollador con experiencia en tecnologías como Java, Spring Framework y Angular. Apasionado por la tecnología y la programación. Mantenimiento de la página web.",
+    socialMedia: {
+      email: "yamandu.lettieri.l@gmail.com",
+      linkedin: "https://www.linkedin.com/in/yamand%C3%BA-lettieri-a29354214/",
+    },
+  },
+];
+---
+
+<Layout
+  title="Nuestro Equipo - Efical SpA"
+  description="Conoce al equipo de profesionales expertos en mantenimiento y certificación de equipos térmicos industriales."
+>
+  <main>
+    <HeroSection
+      title="Nuestro Equipo"
+      subtitle="Conoce a los profesionales detrás de EFICAL SpA"
+      backgroundImage={petroleo}
+    />
+
+    <section class="py-6">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-extrabold text-blue-950">Nuestro Equipo</h2>
+          <p class="mt-2 text-gray-600 text-lg max-w-2xl mx-auto">
+            Profesionales comprometidos con la excelencia técnica y humana.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {
+            teamMembers.map((member) => (
+              <article class="relative bg-gray-50 rounded-2xl border border-gray-200 shadow hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full">
+                <div class="absolute h-1 w-full bg-[hsl(82.35deg_42.15%_52.55%)] top-0 left-0" />
+                <div class="p-6 text-center flex flex-col flex-grow">
+                  <h3 class="text-xl font-semibold text-blue-950 mb-1">
+                    {member.name}
+                  </h3>
+                  <p class="text-[hsl(82.35deg_42.15%_52.55%)] font-medium mb-2">
+                    {member.role}
+                  </p>
+                  <p class="text-sm text-gray-600 mb-4 flex-grow">
+                    {member.description}
+                  </p>
+
+                  <div class="flex justify-center gap-4 mt-auto">
+                    {member.socialMedia?.linkedin && (
+                      <a
+                        href={member.socialMedia.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-gray-400 hover:text-[hsl(82.35deg_42.15%_52.55%)] transition"
+                      >
+                        <svg
+                          class="h-6 w-6"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5V5c0-2.761-2.239-5-5-5zM8 19H5V8h3v11zM6.5 6.495c-.947 0-1.54-.627-1.54-1.487 0-.853.593-1.487 1.57-.487.973 0 1.54.627 1.54 1.487 0 .86-.593 1.487-1.57.487zM20 19h-3v-5.636c0-3.37-4-3.529-4 0V19h-3V8h3v1.542c1.734-2.822 7-2.673 7 2.392V19z" />
+                        </svg>
+                      </a>
+                    )}
+                    {member.socialMedia?.email && (
+                      <a
+                        href={`mailto:${member.socialMedia.email}`}
+                        class="text-gray-400 hover:text-[hsl(82.35deg_42.15%_52.55%)] transition"
+                      >
+                        <svg
+                          class="h-6 w-6"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-7.5 7.5-7.5-7.5"
+                          />
+                        </svg>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/layout.astro";
+import Hero from "../components/heroContent.astro";
+import ServiHome from "../components/servihome.astro";
+import MisionVision from "../components/misionVision.astro";
+---
+
+<Layout title="Inicio" description="Página principal">
+  <main>
+    <!-- Hero Section -->
+    <Hero />
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Mission Vision Section -->
+      <MisionVision />
+
+      <!-- Services Section -->
+      <ServiHome />
+    </div>
+  </main>
+</Layout>

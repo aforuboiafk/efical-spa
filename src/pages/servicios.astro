@@ -1,0 +1,115 @@
+---
+import Layout from "../layouts/layout.astro";
+import HeroSection from "../components/heroSection.astro";
+import ServiceCard from "../components/serviceCard.astro";
+import { Icon } from "astro-icon/components";
+
+// Import service images
+import ds10Image from "../images/trabajos/ds10caldera.jpg";
+import boilerImage from "../images/trabajos/boiler2.jpg";
+import rielloImage from "../images/trabajos/Riello.jpg";
+import spiraxImage from "../images/trabajos/spirax.jpg";
+
+const services = [
+  {
+    icon: "mdi:certificate-outline",
+    title: "Certificaciones Técnicas",
+    description:
+      "Garantizamos el cumplimiento normativo y la seguridad de sus equipos con certificaciones de validez nacional e internacional.",
+    details: [
+      "Certificación de calderas y recipientes a presión",
+      "Certificación de hornos y equipos de combustión",
+      "Certificación de quemadores industriales",
+      "Elaboración de informes técnicos y auditorías de seguridad",
+    ],
+    image: ds10Image,
+  },
+  {
+    icon: "mdi:tools",
+    title: "Mantenimiento y Reparación",
+    description:
+      "Maximice la vida útil y la eficiencia de sus equipos con nuestros servicios de mantenimiento preventivo y correctivo.",
+    details: [
+      "Mantenimiento programado de calderas y sistemas térmicos",
+      "Servicio de reparación y diagnóstico de fallas",
+      "Optimización de la eficiencia energética y reducción de emisiones",
+      "Servicios de emergencia 24/7 para fallas críticas",
+    ],
+    image: boilerImage,
+  },
+  {
+    icon: "mdi:cart",
+    title: "Venta de Equipos y Repuestos",
+    description:
+      "Ofrecemos una amplia gama de equipos de alta calidad y repuestos originales para asegurar la operatividad de su planta.",
+    details: [
+      "Venta de calderas y quemadores de última generación",
+      "Distribución de repuestos originales para las principales marcas",
+      "Asesoría técnica especializada para la selección de equipos",
+      "Instalación y puesta en marcha de equipos nuevos",
+    ],
+    image: rielloImage,
+  },
+  {
+    icon: "mdi:warehouse",
+    title: "Suministros Industriales",
+    description:
+      "Todo lo que su operación necesita en un solo lugar: herramientas, insumos y equipos especializados de la más alta calidad.",
+    details: [
+      "Herramientas de diagnóstico y medición",
+      "Insumos de combustión y materiales refractarios",
+      "Componentes de control y seguridad (válvulas, sensores)",
+      "Materiales técnicos y accesorios para instalaciones térmicas",
+    ],
+    image: spiraxImage,
+  },
+];
+---
+
+<Layout
+  title="Nuestros Servicios - Efical SpA"
+  description="Descubra nuestras soluciones integrales para equipos térmicos industriales, incluyendo certificaciones, mantenimiento, venta de equipos y suministros."
+>
+  <div class="bg-gray-50">
+    <HeroSection
+      title="Soluciones Integrales para la Industria Térmica"
+      subtitle="Maximice la eficiencia y seguridad de su operación con nuestros servicios especializados."
+      backgroundImage={rielloImage}
+      bgColor="bg-[hsl(82.35deg_42.15%_52.55%)]"
+    />
+
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {
+          services.map((service) => (
+            <ServiceCard
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+              details={service.details}
+              image={service.image}
+            />
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="bg-blue-950 text-white py-16">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-3xl font-bold mb-6">
+          ¿Necesita un servicio o asesoría?
+        </h2>
+        <p class="text-lg mb-8 text-gray-200">
+          Contáctenos hoy mismo para obtener una cotización personalizada y
+          optimizar el rendimiento de sus equipos.
+        </p>
+        <a
+          href="/contacto"
+          class="inline-block bg-[hsl(82.35deg_42.15%_52.55%)] text-white font-semibold py-4 px-8 rounded-md hover:opacity-90 transition-opacity duration-300"
+        >
+          Solicitar Cotización
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>
